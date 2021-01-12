@@ -25,6 +25,7 @@ const siteContent = {
     "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+   
   },
   "contact": {
     "contact-h4" : "Contact",
@@ -40,3 +41,35 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let quack = document.getElementById("cta-img");
+quack.setAttribute('src', siteContent["cta"]["img-src"])
+
+let duck = document.getElementById("middle-img");
+duck.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+
+const firstSection = document.querySelector('.cta-text');
+const largeText = firstSection.querySelector('h1');
+const firstButton = firstSection.querySelector('button');
+largeText.textContent = "DOM IS AWESOME";
+firstButton.textContent = 'Get Started';
+
+
+const mainH4 = document.querySelectorAll('h4');
+mainH4[0].textContent = siteContent["main-content"]["features-h4"];
+mainH4[1].textContent = siteContent["main-content"]["about-h4"];
+mainH4[2].textContent = siteContent["main-content"]["services-h4"];
+mainH4[3].textContent = siteContent["main-content"]["product-h4"];
+mainH4[4].textContent = siteContent["main-content"]["vision-h4"];
+
+const mainPara = document.querySelectorAll('p');
+mainPara[0].textContent = siteContent["main-content"]["features-content"];
+mainPara[1].textContent = siteContent["main-content"]["about-content"];
+mainPara[2].textContent = siteContent["main-content"]["services-content"];
+mainPara[3].textContent = siteContent["main-content"]["product-content"];
+mainPara[4].textContent = siteContent["main-content"]["vision-content"];
+
+const contactH4 = document.querySelectorAll('contact h4')
+contactH4.textContent = siteContent["contact"]
+
